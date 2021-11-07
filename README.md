@@ -30,7 +30,6 @@ Users should be able to retrieve information about Bob Ross and the Joy of Paint
 
 ## Resources
 
-/seasons/:id
 - Bob Ross Quotes: https://www.goodreads.com/author/quotes/102372.Bob_Ross
 - Bob Ross Seasons and Episodes: https://imdb-api.com/fullcast/tt0383795
 - Bob Ross Paintings: https://github.com/jwilber/Bob_Ross_Paintings
