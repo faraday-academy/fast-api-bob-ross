@@ -4,6 +4,7 @@ Built with Fast API
 
 ## Requirements
 
+Users should be able to retrieve information about Bob Ross and the Joy of Painting in an intuitive manner. More information coming soon...
 
 ## API
 
