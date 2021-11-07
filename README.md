@@ -6,6 +6,17 @@ Built with Fast API
 
 Users should be able to retrieve information about Bob Ross and the Joy of Painting in an intuitive manner. More information coming soon...
 
+### MVP
+
+- In-memory object as a database.
+- Crud operations are open to all users.
+
+### Version 1
+
+- Postgres database
+- User authentication
+- GET requests are public but must be authenticated to make other requests.
+
 ## API
 
 **/seasons**
