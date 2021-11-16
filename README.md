@@ -17,6 +17,13 @@ Users should be able to retrieve information about Bob Ross and the Joy of Paint
 - User authentication
 - GET requests are public but must be authenticated to make other requests.
 
+## Steps
+
+1. Set up Fast API and server
+1. Create Endpoints
+1. Set up database with Alembic
+1. Set up SQL Alchemy
+
 ## API
 
 **/seasons**
