@@ -3,7 +3,8 @@ from fastapi import FastAPI
 from pydantic import BaseModel
 
 from api import seasons, episodes
-from db.db_setup import SessionLocal, engine, Base
+from db.db_setup import SessionLocal, engine
+from db.models.episode import Base
 
 app = FastAPI()
 
@@ -16,6 +17,7 @@ app.include_router(episodes.router)
 @app.get("/")
 async def root():
     return {"message": "Hello World"}
+
 
 # /paintings
 @app.get("/paintings")

@@ -1,10 +1,37 @@
+from typing import List
+
 from fastapi import APIRouter
+from fastapi import Depends
+from sqlalchemy.orm import Session
+
+from db.models.episode import Episode
+from db.db_setup import SessionLocal
+from schemas.episode import Episode as EpisodeSchema
 
 router = APIRouter()
 
 
-@router.get("/episodes")
-async def get_episodes():
+def get_db():
+    db = SessionLocal()
+    try:
+        yield db
+    finally:
+        db.close()
+
+
+def get_episodes(db: Session):
+    # TODO: debug this function
+    return db.query(Episode).all()
+
+
+@router.get("/episodes", response_model=List[EpisodeSchema])
+async def get_episodes(db: Session = Depends(get_db)):
+    episodes = get_episodes(db)
+    return episodes
+
+
+@router.post("/episodes")
+async def create_episode():
     return True
 
 
