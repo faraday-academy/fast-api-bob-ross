@@ -19,14 +19,13 @@ def get_db():
         db.close()
 
 
-def get_episodes(db: Session):
-    # TODO: debug this function
+def get_episodes_utils(db: Session):
     return db.query(Episode).all()
 
 
 @router.get("/episodes", response_model=List[EpisodeSchema])
 async def get_episodes(db: Session = Depends(get_db)):
-    episodes = get_episodes(db)
+    episodes = get_episodes_utils(db)
     return episodes
 
 
@@ -38,4 +37,3 @@ async def create_episode():
 @router.get("/episodes/{id}")
 async def get_episode():
     return True
-
