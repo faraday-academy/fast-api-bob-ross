@@ -2,63 +2,21 @@ from typing import Optional, List
 from fastapi import FastAPI
 from pydantic import BaseModel
 
+from api import seasons, episodes
+from db.db_setup import SessionLocal, engine
+from db.models.episode import Base
+
 app = FastAPI()
 
-db = {
-    "seasons": []
-}
+Base.metadata.create_all(bind=engine)
 
-class Season(BaseModel):
-    id: int
-    name: str
-    description: Optional[str]
+app.include_router(seasons.router)
+app.include_router(episodes.router)
 
 
 @app.get("/")
 async def root():
     return {"message": "Hello World"}
-
-
-# /seasons
-@app.get("/seasons", response_model=List[Season])
-async def get_seasons():
-    return db["seasons"]
-
-
-@app.post("/seasons")
-async def create_season(season: Season):
-    db["seasons"].append(season)
-    return True
-
-
-# /seasons/:id
-@app.get("/seasons/{id}")
-async def get_season():
-    return True
-
-
-# /seasons/:id/episodes
-@app.get("/seasons/{id}/episodes")
-async def get_episodes_from_season():
-    return True
-
-
-# /seasons/:id/paintings
-@app.get("/seasons/{id}/paintings")
-async def get_paintings_from_season():
-    return True
-
-
-# /episodes
-@app.get("/episodes")
-async def get_episodes():
-    return True
-
-
-# /episodes/:id
-@app.get("/episodes/{id}")
-async def get_episode():
-    return True
 
 
 # /paintings
@@ -67,7 +25,6 @@ async def get_paintings():
     return True
 
 
-# /paintings/:id
 @app.get("/paintings/{id}")
 async def get_painting():
     return True
