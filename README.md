@@ -2,6 +2,8 @@
 
 Built with Fast API
 
+Inspired by the Swapi open API: https://swapi.dev/
+
 ## Requirements
 
 Users should be able to retrieve information about Bob Ross and the Joy of Painting in an intuitive manner. More information coming soon...
