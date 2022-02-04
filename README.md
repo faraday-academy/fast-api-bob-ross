@@ -46,6 +46,33 @@ Users should be able to retrieve information about Bob Ross and the Joy of Paint
 
 ## Schema
 
+Season
+- number
+- year
+
+Episode
+- season_id
+- title
+- description
+- date
+
+Painting
+- episode_id
+- title
+
+Quote
+- text
+- episode: m2m
+
+PaintColor
+- name
+- hex: unique
+- paintings: m2m
+
+Animal
+- species
+- episodes: m2m
+
 ## Resources
 
 - Bob Ross Quotes: https://www.goodreads.com/author/quotes/102372.Bob_Ross
