@@ -1,1 +1,8 @@
 Generic single-database configuration.
+
+## Migration Seeding Sample
+
+with open(os.path.join(os.path.dirname(__file__), "../data/episodes.json")) as f:
+    episode_data = f.read()
+
+op.bulk_insert(episodes, json.loads(episode_data))
