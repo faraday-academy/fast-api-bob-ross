@@ -13,7 +13,7 @@ class Painting(Base):
     episode_id = Column(Integer, ForeignKey("seasons.id"), nullable=False)
     title = Column(String(100), nullable=False)
     image_url = Column(String, nullable=True)
-    type = Column(String(25), nullable=False)
+    # TODO: type = Enum
 
     # TODO: many to many episode_references
     # season = relationship("Season", back_populates="episodes")
