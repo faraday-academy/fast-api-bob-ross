@@ -52,13 +52,18 @@ Season
 
 Episode
 - season_id
+- number
 - title
 - description
+- youtube_url
 - date
 
 Painting
 - episode_id
 - title
+- img_url
+- type: Enum(landscape, portrait, flower...)
+- episode_references: m2m
 
 Quote
 - text
@@ -68,6 +73,10 @@ PaintColor
 - name
 - hex: unique
 - paintings: m2m
+
+Guest
+- name
+- episodes: m2m
 
 Animal
 - species
