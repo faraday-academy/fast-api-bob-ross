@@ -1,37 +1,42 @@
 [
-    {
-      "id": 1, 
-      "season": 1,
-      "title": "A Walk in the Woods",
-      "description": "",
-      "date": "January 11, 1983"
-    },
-    {
-      "id": 2, 
-      "season": 1,
-      "title": "Mount McKinley",
-      "description": "",
-      "date": "January 11, 1983"
-    },
-    {
-      "id": 3, 
-      "season": 1,
-      "title": "Ebony Sunset",
-      "description": "",
-      "date": "January 18, 1983"
-    },
-    {
-      "id": 4, 
-      "season": 1,
-      "title": "Winter Mist",
-      "description": "",
-      "date": "January 25, 1983"
-    },
-    {
-      "id": 5, 
-      "season": 1,
-      "title": "Quiet Stream",
-      "description": "",
-      "date": "February 1, 1983"
-    }
+  {
+    "id": 1,
+    "season_id": 1,
+    "number": 1,
+    "title": "A Walk in the Woods",
+    "description": "",
+    "date": "January 11, 1983"
+  },
+  {
+    "id": 2,
+    "season_id": 1,
+    "number": 2,
+    "title": "Mount McKinley",
+    "description": "",
+    "date": "January 11, 1983"
+  },
+  {
+    "id": 3,
+    "season_id": 1,
+    "number": 3,
+    "title": "Ebony Sunset",
+    "description": "",
+    "date": "January 18, 1983"
+  },
+  {
+    "id": 4,
+    "season_id": 1,
+    "number": 4,
+    "title": "Winter Mist",
+    "description": "",
+    "date": "January 25, 1983"
+  },
+  {
+    "id": 5,
+    "season_id": 1,
+    "number": 5,
+    "title": "Quiet Stream",
+    "description": "",
+    "date": "February 1, 1983"
+  }
 ]

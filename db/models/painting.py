@@ -1,9 +1,23 @@
-# painting and paintcolor
-from sqlalchemy import Column, ForeignKey, Integer, String, null
+import enum
+
+from sqlalchemy import Column, ForeignKey, Integer, String, Enum, Table
 from sqlalchemy.orm import relationship
 from sqlalchemy.sql.sqltypes import Unicode
 
 from ..db_setup import Base
+
+
+class PaintingType(enum.IntEnum):
+    landscape = 1
+    portrait = 2
+
+
+paintings_colors = Table(
+    "paintings_colors",
+    Base.metadata,
+    Column("painting_id", ForeignKey("paintings.id"), primary_key=True),
+    Column("paint_color_id", ForeignKey("paint_colors.id"), primary_key=True),
+)
 
 
 class Painting(Base):
@@ -13,10 +27,13 @@ class Painting(Base):
     episode_id = Column(Integer, ForeignKey("seasons.id"), nullable=False)
     title = Column(String(100), nullable=False)
     image_url = Column(String, nullable=True)
-    # TODO: type = Enum
+    type = Column(Enum(PaintingType))
 
     # TODO: many to many episode_references
-    # season = relationship("Season", back_populates="episodes")
+    episode = relationship("Season", back_populates="episodes", uselist=False)
+    paint_colors = relationship(
+        "PaintColor", secondary=paintings_colors, back_populates="paintings"
+    )
 
 
 class PaintColor(Base):
@@ -25,4 +42,7 @@ class PaintColor(Base):
     id = Column(Integer, primary_key=True)
     name = Column(String, nullable=False)
     hex = Column(String, nullable=False)
-    # TODO: paintings = m2m with paintings
+
+    paintings = relationship(
+        "Paintings", secondary=paintings_colors, back_populates="paint_colors"
+    )

@@ -3,6 +3,7 @@ from sqlalchemy.orm import relationship
 from sqlalchemy.sql.sqltypes import Unicode
 
 from ..db_setup import Base
+from .misc import episodes_quotes, episodes_guests, episodes_animals
 
 
 class Episode(Base):
@@ -17,3 +18,14 @@ class Episode(Base):
     date = Column(String(25), nullable=False)
 
     season = relationship("Season", back_populates="episodes")
+    painting = relationship("Painting", back_populates="episode")
+
+    quotes = relationship(
+        "Quote", secondary=episodes_quotes, back_populates="episodes"
+    )
+    guests = relationship(
+        "Guest", secondary=episodes_guests, back_populates="episodes"
+    )
+    animals = relationship(
+        "Animal", secondary=episodes_animals, back_populates="episodes"
+    )
