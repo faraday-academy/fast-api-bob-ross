@@ -24,13 +24,13 @@ class Painting(Base):
     __tablename__ = "paintings"
 
     id = Column(Integer, primary_key=True)
-    episode_id = Column(Integer, ForeignKey("seasons.id"), nullable=False)
+    episode_id = Column(Integer, ForeignKey("episodes.id"), nullable=False)
     title = Column(String(100), nullable=False)
     image_url = Column(String, nullable=True)
     type = Column(Enum(PaintingType))
 
     # TODO: many to many episode_references
-    episode = relationship("Season", back_populates="episodes", uselist=False)
+    episode = relationship("Episode", back_populates="painting", uselist=False)
     paint_colors = relationship(
         "PaintColor", secondary=paintings_colors, back_populates="paintings"
     )

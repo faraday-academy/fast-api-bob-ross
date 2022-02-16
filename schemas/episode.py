@@ -1,12 +1,14 @@
-from typing import List, Optional
+from typing import Optional
 
 from pydantic import BaseModel
 
 
 class EpisodeBase(BaseModel):
+    season_id: int
+    number: int
     title: str
     description: Optional[str] = None
-    season: int
+    youtube_url: str
     date: str
 
 

@@ -93,7 +93,7 @@ def upgrade():
         sa.Column("image_url", sa.String(), nullable=True),
         sa.ForeignKeyConstraint(
             ["episode_id"],
-            ["seasons.id"],
+            ["episodes.id"],
         ),
         sa.PrimaryKeyConstraint("id"),
     )

@@ -1,22 +1,14 @@
-from typing import Optional, List
-from pydantic import BaseModel
+from typing import List
 from fastapi import APIRouter
 
+from schemas.season import Season
+
 router = APIRouter()
-
-db = {
-    "seasons": []
-}
-
-class Season(BaseModel):
-    id: int
-    name: str
-    description: Optional[str]
 
 
 @router.get("/seasons", response_model=List[Season])
 async def get_seasons():
-    return db["seasons"]
+    return True
 
 
 @router.post("/seasons")
@@ -32,9 +24,4 @@ async def get_season():
 
 @router.get("/seasons/{id}/episodes")
 async def get_episodes_from_season():
-    return True
-
-
-@router.get("/seasons/{id}/paintings")
-async def get_paintings_from_season():
     return True

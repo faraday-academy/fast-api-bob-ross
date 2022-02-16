@@ -2,7 +2,7 @@ from typing import Optional, List
 from fastapi import FastAPI
 from pydantic import BaseModel
 
-from api import seasons, episodes
+from api import seasons, episodes, paintings, misc
 from db.db_setup import SessionLocal, engine
 from db.models.episode import Base
 
@@ -12,6 +12,8 @@ Base.metadata.create_all(bind=engine)
 
 app.include_router(seasons.router)
 app.include_router(episodes.router)
+app.include_router(paintings.router)
+app.include_router(misc.router)
 
 
 @app.get("/")

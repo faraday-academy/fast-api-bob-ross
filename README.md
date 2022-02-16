@@ -34,7 +34,7 @@ Users should be able to retrieve information about Bob Ross and the Joy of Paint
 
 **/seasons/:id/episodes**
 
-**/seasons/:id/paintings**
+- Episode endpoints also pull information about paintings.
 
 **/episodes**
 
@@ -44,7 +44,13 @@ Users should be able to retrieve information about Bob Ross and the Joy of Paint
 
 **/paintings/:id**
 
-**/colors**
+**/paing-colors**
+
+**/quote**
+
+**/guests**
+
+**/animals**
 
 ## Schema
 
@@ -65,7 +71,7 @@ Painting
 - title
 - img_url
 - type: Enum(landscape, portrait, flower...)
-- episode_references: m2m
+- TODO: episode_references: m2m (version 2)
 
 Quote
 - text
