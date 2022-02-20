@@ -1,8 +1,17 @@
 # Bob Ross API
 
-Built with Fast API
+This API is designed to give users all kinds of data about the painter Bob Ross from his show "The Joy of Painting." Here is the project board where you can see the progress and tasks: https://github.com/faraday-academy/fast-api-bob-ross/projects/1
 
 Inspired by the Swapi open API: https://swapi.dev/
+
+## Technologies
+
+- Python 3.9+
+- Fast API
+- Uvicorn
+- SQL Alchemy 1.4
+- Pydantic
+- Alembic
 
 ## Requirements
 
