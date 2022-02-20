@@ -10,8 +10,8 @@ Users should be able to retrieve information about Bob Ross and the Joy of Paint
 
 ### MVP
 
-- In-memory object as a database.
-- Crud operations are open to all users.
+- ~~In-memory object as a database.~~
+- ~~Crud operations are open to all users.~~
 
 ### Version 1
 
