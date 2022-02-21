@@ -1,0 +1,92 @@
+[
+    {
+        "id": 1,
+        "name": "Black Gesso",
+        "hex": "000000"
+    },
+    {
+        "id": 2,
+        "name": "Bright Red",
+        "hex": "DB0000"
+    },
+    {
+        "id": 3,
+        "name": "Burnt Umber",
+        "hex": "8A3324"
+    },
+    {
+        "id": 4,
+        "name": "Cadmium Yellow",
+        "hex": "FFEC00"
+    },
+    {
+        "id": 5,
+        "name": "Dark Sienna",
+        "hex": "5F2E1F"
+    },
+    {
+        "id": 6,
+        "name": "Indian Red",
+        "hex": "CD5C5C"
+    },
+    {
+        "id": 7,
+        "name": "Indian Yellow",
+        "hex": "FFB800"
+    },
+    {
+        "id": 8,
+        "name": "Liquid Black",
+        "hex": "000000"
+    },
+    {
+        "id": 8,
+        "name": "Liquid Clear",
+        "hex": "FFFFFF"
+    },
+    {
+        "id": 9,
+        "name": "Midnight Black",
+        "hex": "000000"
+    },
+    {
+        "id": 10,
+        "name": "Phthalo Blue",
+        "hex": "0C0040"
+    },
+    {
+        "id": 11,
+        "name": "Phthalo Green",
+        "hex": "102E3C"
+    },
+    {
+        "id": 12,
+        "name": "Prussian Blue",
+        "hex": "021E44"
+    },
+    {
+        "id": 13,
+        "name": "Sap Green",
+        "hex": "0A3410"
+    },
+    {
+        "id": 14,
+        "name": "Titanium White",
+        "hex": "FFFFFF"
+    },
+    {
+        "id": 15,
+        "name": "Van Dyke Brown",
+        "hex": "221B15"
+    },
+    {
+        "id": 16,
+        "name": "Yellow Ochre",
+        "hex": "C79B00"
+    },
+    {
+        "id": 17,
+        "name": "Alizarin Crimson",
+        "hex": "4E1500"
+    }
+]
